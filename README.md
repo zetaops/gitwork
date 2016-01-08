@@ -144,10 +144,10 @@ git checkout develop && git pull --rebase origin develop
 Second step is rebase your work with updated local develop:
 
 ```bash
-git flow feature rebase delete_user_workflow developÂ
+git flow feature rebase delete_user_workflow develop
 ```
 
-And finally the third step is rebase your work with your origin brach in case of any changes pushed by your colleagues:
+And finally the third step is rebase your work with your origin branch in case of any changes pushed by your colleagues:
 
 ```bash
 git pull --rebase origin delete_user_workflow
