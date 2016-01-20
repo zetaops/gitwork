@@ -1,7 +1,9 @@
 # Zetaops Development Workflow
 
 ## Issues
-First create an issue in Redmine, containing a descriptive title and detailed explanations. Please do not leave empty fields assignee, time estimation, and target version. And please provide watchers, start and due date and others possible.
+First create an issue in Redmine, containing a descriptive title and detailed explanations. Please do not leave empty  **assignee**, **time estimation**, and **target version**. And also please provide **watchers**, **start** and **due date** and other necessary fields whenever needed.
+
+You should give a proper name to your issues. We don't accept [whatthecommit](http://whatthecommit.com/) based bullsh*t issue names. The issue name should explain, the status of the issue, main purpose of the issue and should be descriptive.
 
 If you want github integration to create a pair issue,  mark your issue with github repo tags such as #ulakbus, #zengine, #pyoko etc.. at the and of description field.
 
