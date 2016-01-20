@@ -38,7 +38,10 @@ Use labels below to mark commits as what they are for:
 - **FIX** - Fixed for any bug fixes.
 - **SECURITY** - Security to invite users to upgrade in case of vulnerabilities.
 - **REFACTOR** - Refactor code do not change any feature
-- **UNIVERSE** - The rest whatever you do!
+
+- **UNIVERSE** - The rest whatever you do! When you use this label, this site[1] automatically will trigger and one dove silently going to die somewhere in UNIVERSE!
+
+[1] http://www.nooooooooooooooo.com/
 
 ### Redmine Referers
 Use patterns below in commit messages to close, fix, refer or report progress for issues:
@@ -160,10 +163,10 @@ git checkout develop && git pull --rebase origin develop
 Second step is rebase your work with updated local develop:
 
 ```bash
-git flow feature rebase delete_user_workflow developÂ
+git flow feature rebase delete_user_workflow develop
 ```
 
-And finally the third step is rebase your work with your origin brach in case of any changes pushed by your colleagues:
+And finally the third step is rebase your work with your origin branch in case of any changes pushed by your colleagues:
 
 ```bash
 git pull --rebase origin delete_user_workflow
