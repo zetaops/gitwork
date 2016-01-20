@@ -1,6 +1,22 @@
-# Zetaops Git Work Flow
+# Zetaops Development Workflow
 
-## Git Flow Installation
+## Issues
+First create an issue in Redmine, containing a descriptive title and detailed explanations. Please do not leave empty fields assignee, time estimation, and target version. And please provide watchers, start and due date and others possible.
+
+If you want github integration to create a pair issue,  mark your issue with github repo tags such as #ulakbus, #zengine, #pyoko etc.. at the and of description field.
+
+Please open issues as new and report progress by commenting it and increasing progress status, also remember writing development log times.
+
+Commit messages should refer issue or issue pairs in Redmine and Github. Also it is possible to mark issue progress in commit messages, detailed informations are below.
+
+If your issue blocks others or it has special 'Priority', do not forget set 'Priority'.
+
+When you finish your work, mark your issue as 'Resolved', never close it.
+
+
+## Git Flow
+
+### Git Flow Installation
 
 Install these two packages on top of your git and git completions packages:
 
@@ -10,7 +26,7 @@ Install these two packages on top of your git and git completions packages:
 Please see the installation instructions for each package in its own documentation
 
 
-## Commit Labels for Pretty Changelogs
+### Commit Labels for Pretty Changelogs
 (see: http://keepachangelog.com/)
 
 Use labels below to mark commits as what they are for:
@@ -24,7 +40,7 @@ Use labels below to mark commits as what they are for:
 - **REFACTOR** - Refactor code do not change any feature
 - **UNIVERSE** - The rest whatever you do!
 
-## Redmine Referers
+### Redmine Referers
 Use patterns below in commit messages to close, fix, refer or report progress for issues:
 
 - **rclose #123**: mark issue number 123 resolved and set issue progress %100
@@ -36,7 +52,7 @@ Use patterns below in commit messages to close, fix, refer or report progress fo
 - **p70 #123**: mark issue number 123 resolved and set issue progress %100. It must be one of between p10 and p90 incrementing by 10.
 
 
-## Github Referers
+### Github Referers
 Github will understand you when you type in your comments:
 
 - **closes GH-123**: close issue 123 of Github origin repo.
@@ -55,7 +71,7 @@ GitHub rewrites commit messages to show us prettier without changing original on
 **Warning 1:**
 Github sets main branch as master unless you pick another one in repo settings. We use GitFlow branching model, so develop branch should be set as main branch. Otherwise your issue refs wont work.
 
-## Commit Message Samples
+### Commit Message Samples
 The commit message below means:
 
   - commit will take place in ADD section of CHANGELOG
@@ -110,9 +126,9 @@ The commit message below means:
   git commit -m 'ADD closes GH-78, zetaops/ulakbusGH-13, rclose #485, #486, p60 #481, p40 #490, rref #492, #493. Get and sync methods were added for new staff workflow'
 ```
 
-## Working with Git Flow
+### Working with Git Flow
 
-### Implementing a new feature
+#### Implementing a new feature
 Just create a new feature branch:
 
 ```bash
