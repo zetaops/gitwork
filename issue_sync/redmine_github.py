@@ -43,11 +43,30 @@ def create_issue_github(redmine_issue, github_repo):
     print(redmine_issue.subject, github_repo)
     owner, repository = github_repo.split('/')
     title = '%s #%s' % (redmine_issue.subject, redmine_issue.id)
+    github_user = match_github_user_with_redmine_assignee(redmine_issue)
     new_github_issue = gh.create_issue(owner=owner, repository=repository, title=title,
-                                       body=redmine_issue.description)
+                                       body=redmine_issue.description, assignee=github_user)
     if new_github_issue:
-        redmine_issue.description += '\n#GH-%s : %s\n\n' % (new_github_issue.number, new_github_issue.html_url)
+        redmine_issue.description += '\n#GH-%s : %s\n\n' % (
+            new_github_issue.number, new_github_issue.html_url)
         redmine_issue.save()
+
+
+def match_github_user_with_redmine_assignee(redmine_issue):
+    redmine_user = redmine.user.get(redmine_issue.assigned_to.id)
+    github_users = github_user_set_from_bot_followers()
+    matching_user = [user for user in github_users if redmine_user in user]
+    if len(matching_user) == 1:
+        return matching_user[0]
+    else:
+        raise Exception('Check your redmine logins')
+
+
+def github_user_set_from_bot_followers():
+    github_users = []
+    for user in gh.iter_followers():
+        github_users.append(user.login)
+    return github_users
 
 
 # redmine project
@@ -68,10 +87,10 @@ week_ago = now - datetime.timedelta(weeks=1)
 last_week_filter_string = "><{:%Y-%m-%d}|{:%Y-%m-%d}".format(week_ago, now)
 
 issues = redmine.issue.filter(
-        project_id=project.id,
-        sort='created_on:desc',
-        created_on=last_week_filter_string,
-        limit=20
+    project_id=project.id,
+    sort='created_on:desc',
+    created_on=last_week_filter_string,
+    limit=20
 )
 
 for issue in issues:
