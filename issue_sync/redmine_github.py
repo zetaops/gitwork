@@ -95,7 +95,7 @@ issues = redmine.issue.filter(
 
 for issue in issues:
     for tag, repo in repo_map.items():
-        if issue.description.find('#%s' % tag) > 0 and issue.description.find('#github') == -1:
+        if issue.description.find('#%s' % tag) > 0 and issue.description.find('#%s-' % tag) < 0 and issue.description.find('#github') == -1:
             create_issue_github(issue, repo)
     if issue.description.find('#github') == -1:
         issue.description += ' \n\n#github\n'
