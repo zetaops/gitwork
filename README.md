@@ -7,13 +7,15 @@ You should give a proper name to your issues. We don't accept [whatthecommit](ht
 
 If you want github integration to create a pair issue,  mark your issue with github repo tags such as #ulakbus, #zengine, #pyoko etc.. at the and of description field.
 
-Please open issues as new and report progress by commenting it and increasing progress status, also remember writing development log times.
+Please open issues as new and report progress by commenting it and increasing progress status, also remember writing development log times (mark your ***spent time***).
 
 Commit messages should refer issue or issue pairs in Redmine and Github. Also it is possible to mark issue progress in commit messages, detailed informations are below.
 
 If your issue blocks others or it has special 'Priority', do not forget set 'Priority'.
 
-When you finish your work, mark your issue as 'Resolved', never close it.
+When you finish your work, mark your issue as ***'Resolved'***, never close it.
+
+In case you'll need another dev to check your work or your work is still incomplete because of any reason, mark your issue as resolved and change ***Assignee*** name to your supervisor name.
 
 
 ## Git Flow
