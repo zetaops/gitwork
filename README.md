@@ -180,3 +180,32 @@ Finally, finish your work:
 ```bash
 git flow feature finish delete_user_workflow
 ```
+
+
+#### Release (Tag Version)
+Start a new release: Please be sure you are on `develop` branch and your working stage is clear.
+
+```bash
+git flow release start 0.7.1
+```
+
+Bump version with a leading `v` and commit:
+
+```bash
+echo 'v0.7.1' > VERSION
+git add VERSION
+git commit -m 'bump version 0.7.1'
+```
+
+Finish your new release:
+```bash
+git flow release finish '0.7.1'
+```
+
+Push merged branches `develop` and `master`, and push new tag:
+```bash
+git push
+git push --tags
+git checkout master
+git push
+```
