@@ -1,18 +1,28 @@
 # Zetaops Development Workflow
 
 ## Issues
-First create an issue in Redmine, containing a descriptive title and detailed explanations. Please do not leave empty fields assignee, time estimation, and target version. And please provide watchers, start and due date and others possible.
 
-If you want github integration to create a pair issue,  mark your issue with github repo tags such as #ulakbus, #zengine, #pyoko etc.. at the and of description field.
+- First create an issue in Redmine, containing a descriptive title and detailed explanations. Please do not leave empty  **assignee**, **time estimation**, and **target version**. And also please provide **watchers**, **start** and **due date** and other necessary fields whenever needed. 
 
-Please open issues as new and report progress by commenting it and increasing progress status, also remember writing development log times.
+- You should give a proper name to your issues. We don't accept [whatthecommit](http://whatthecommit.com/) based bullsh*t issue names. The issue name should explain, the status of the issue, main purpose of the issue and should be descriptive.
 
-Commit messages should refer issue or issue pairs in Redmine and Github. Also it is possible to mark issue progress in commit messages, detailed informations are below.
+- The issue should be small enough. You can create more then one issue for the same task. 
 
-If your issue blocks others or it has special 'Priority', do not forget set 'Priority'.
+- If you want github integration to create a pair issue,  mark your issue with github repo tags such as #ulakbus, #zengine, #pyoko etc.. at the and of description field.
 
-When you finish your work, mark your issue as 'Resolved', never close it.
+- Please open issues as new and report progress by commenting it and increasing progress status, also remember writing development log times (mark your ***spent time***).
 
+- Commit messages should refer issue or issue pairs in Redmine and Github. Also it is possible to mark issue progress in commit messages, detailed informations are below.
+
+- If your issue blocks others or it has special 'Priority', do not forget set 'Priority'.
+
+- When you finish your work, mark your issue as ***'Resolved'***, never close it.
+
+- In case you'll need another dev to check your work or your work is still incomplete because of any reason, mark your issue as resolved and change ***Assignee*** name to your supervisor name.
+
+- When you are creating an issue, if the issue estimation is greater then ***5 hour***, you should notify your supervisor to discuss why you'll need this time. 
+
+- Any issues greater then ***10 hours*** will be threated as architectural interference and should have detailed documentation to be attached to relevant project. You should have at least one meeting with team!
 
 ## Git Flow
 
