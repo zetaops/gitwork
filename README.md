@@ -230,3 +230,15 @@ git push --tags
 git checkout master
 git push
 ```
+
+And [here](release.sh) we have a simple bash script combines all for you:
+```bash
+./release.sh 0.7.1
+```
+
+Please be sure you are on branch develop and your working directory clean before running. You can check simply with ```git status``` and expect something like:
+
+```
+On branch develop
+Your branch is up-to-date with 'origin/develop'.
+```
