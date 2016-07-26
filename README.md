@@ -179,7 +179,7 @@ git flow feature rebase delete_user_workflow develop
 And finally the third step is rebase your work with your origin branch in case of any changes pushed by your colleagues:
 
 ```bash
-git pull --rebase origin delete_user_workflow
+git pull --rebase origin feature/delete_user_workflow
 ```
 
 Fix conflicts if you encounter any by iteration of ``git add conflict_files`` && ```git rebase --continue```
