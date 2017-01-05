@@ -62,7 +62,7 @@ Use patterns below in commit messages to close, fix, refer or report progress fo
 
 - **rref #123**: refers issue number 123,
 
-- **p70 #123**: mark issue number 123 resolved and set issue progress %100. It must be one of between p10 and p90 incrementing by 10.
+- **p70 #123**: set issue progress %70. It must be one of between p10 and p90 incrementing by 10.
 
 
 ### Github Referers
