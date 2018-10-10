@@ -242,3 +242,5 @@ Please be sure you are on branch develop and your working directory clean before
 On branch develop
 Your branch is up-to-date with 'origin/develop'.
 ```
+
+Locutus is not dead yet!
