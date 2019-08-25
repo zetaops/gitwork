@@ -22,7 +22,7 @@
 
 - When you are creating an issue, if the issue estimation is greater then ***5 hour***, you should notify your supervisor to discuss why you'll need this time.
 
-- Any issues greater then ***10 hours*** will be threated as architectural interference and should have detailed documentation to be attached to relevant project. You should have at least one meeting with team!
+- Any issue greater then ***10 hours*** will be treated as architectural interference. Such an issue should have detailed documentation attached to the relevant project. You should have at least one meeting with the team.
 
 ## Git Flow
 
